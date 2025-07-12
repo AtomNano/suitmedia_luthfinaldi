@@ -41,9 +41,19 @@ class SecondScreen extends StatelessWidget {
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: () => Get.to(() => ThirdScreen()),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color(0xFF2B637B),
+                  foregroundColor: Colors.white,
+                  padding: const EdgeInsets.symmetric(vertical: 16),
+                  textStyle: const TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
                 child: const Text("Choose a User"),
               ),
             ),
+            const SizedBox(height: 20)
           ],
         ),
       ),

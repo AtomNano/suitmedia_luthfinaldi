@@ -34,9 +34,7 @@ class FirstScreen extends StatelessWidget {
                       Container(
                         width: 116,
                         height: 116,
-                        decoration: const BoxDecoration(
-                          shape: BoxShape.circle,
-                        ),
+                        decoration: const BoxDecoration(shape: BoxShape.circle),
                         child: Center(
                           child: Image.asset(
                             'assets/images/ic_photo.png',
@@ -50,8 +48,29 @@ class FirstScreen extends StatelessWidget {
                       TextField(
                         controller: controller.nameController,
                         decoration: const InputDecoration(
-                          labelText: "Name",
-                          border: OutlineInputBorder(),
+                          hintText: "Name",
+                          hintStyle: TextStyle(color: Colors.grey),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.all(Radius.circular(15)),
+                            borderSide: BorderSide(
+                              color: Colors.white,
+                              width: 2,
+                            ),
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.all(Radius.circular(15)),
+                            borderSide: BorderSide(
+                              color: Colors.white,
+                              width: 2,
+                            ),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.all(Radius.circular(15)),
+                            borderSide: BorderSide(
+                              color: Colors.white,
+                              width: 2,
+                            ),
+                          ),
                           filled: true,
                           fillColor: Colors.white,
                         ),
@@ -61,22 +80,44 @@ class FirstScreen extends StatelessWidget {
                       TextField(
                         controller: controller.sentenceController,
                         decoration: const InputDecoration(
-                          labelText: "Palindrome",
-                          border: OutlineInputBorder(),
+                          hintText: "Palindrome",
+                          hintStyle: TextStyle(color: Colors.grey),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.all(Radius.circular(15)),
+                            borderSide: BorderSide(
+                              color: Colors.white,
+                              width: 2,
+                            ),
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.all(Radius.circular(15)),
+                            borderSide: BorderSide(
+                              color: Colors.white,
+                              width: 2,
+                            ),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.all(Radius.circular(15)),
+                            borderSide: BorderSide(
+                              color: Colors.white,
+                              width: 2,
+                            ),
+                          ),
                           filled: true,
                           fillColor: Colors.white,
                         ),
                       ),
+                      // tombol
                       const SizedBox(height: 30),
                       SizedBox(
                         width: double.infinity,
                         child: ElevatedButton(
                           onPressed: controller.checkPalindrome,
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: const Color(0xFF255FA5),
+                            backgroundColor: Color(0xFF2B637B),
                             foregroundColor: Colors.white,
-                            padding: const EdgeInsets.symmetric(vertical: 16),
-                            textStyle: const TextStyle(
+                            padding: EdgeInsets.symmetric(vertical: 16),
+                            textStyle: TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
                             ),
@@ -90,10 +131,10 @@ class FirstScreen extends StatelessWidget {
                         child: ElevatedButton(
                           onPressed: controller.goToNextScreen,
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: const Color(0xFF255FA5),
+                            backgroundColor: Color(0xFF2B637B),
                             foregroundColor: Colors.white,
-                            padding: const EdgeInsets.symmetric(vertical: 16),
-                            textStyle: const TextStyle(
+                            padding: EdgeInsets.symmetric(vertical: 16),
+                            textStyle: TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
                             ),
